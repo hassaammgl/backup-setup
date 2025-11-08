@@ -1,0 +1,21 @@
+{
+  "name": "backup-setup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hassaammgl/backup-setup.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/hassaammgl/backup-setup/issues"
+  },
+  "homepage": "https://github.com/hassaammgl/backup-setup#readme"
+}

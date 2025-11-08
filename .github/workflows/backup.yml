@@ -1,0 +1,27 @@
+name: GitHub Auto Backup
+
+on:
+  schedule:
+    - cron: "0 0 */3 * *" # Every 3 days at midnight UTC
+  workflow_dispatch: # allows manual run too
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout script repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run backup script
+        env:
+          SOURCE_TOKEN: ${{ secrets.SOURCE_TOKEN }}
+          DEST_TOKEN: ${{ secrets.DEST_TOKEN }}
+        run: node backup.js
